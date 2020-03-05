@@ -1,18 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import data from './products.json'
-
+import Products from './components/Products/Products';
+import Heading from './components/Heading/Heading';
+import data from './products.json';
 
 function App() {
   return (
     <div className="App">
-      <h1>Список товаров</h1>
-      <ul>
-          {data.slice(0, 3).map((prod) => 
-          <li>{prod.name}</li> 
-          )}
-      </ul>
+      <Heading text = "Список товаров"/>
+      <Products data = {data}/>
     </div>
   );
 }
